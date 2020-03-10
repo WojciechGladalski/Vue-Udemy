@@ -1,4 +1,4 @@
-# vue-udemy
+# Vue-Udemy
 
 ## Project setup
 ```
