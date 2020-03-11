@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
 <!--                zbindować daną-->
-                <app-user-detail :name="name"></app-user-detail>
+                <app-user-detail :myName="name" @nameWasReset="name = $event"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -28,11 +28,7 @@
         },
         methods: {
             changeName() {
-                if (this.name === 'Wojciech') {
-                    this.name = 'Max'
-                } else {
-                    this.name = 'Wojciech'
-                }
+                this.name = 'Max'
             }
         },
         components: {
