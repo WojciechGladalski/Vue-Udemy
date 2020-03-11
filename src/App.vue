@@ -1,11 +1,9 @@
 <template>
-  <h1>Yellow Vue!</h1>
+    <app-server-status></app-server-status>
 </template>
 
 <script>
-  export default {
     
-  }
 </script>
 
 <style>
