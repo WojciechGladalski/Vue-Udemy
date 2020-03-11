@@ -2,6 +2,8 @@
     <div class="component">
         <h1>The User Component</h1>
         <p>I'm an awesome User!</p>
+        <p>Name is: {{name}}</p>
+        <p>Age is: {{age}}</p>
         <button @click="changeName">Change my Name</button>
         <hr>
         <div class="row">
@@ -26,6 +28,7 @@
 <script>
     import UserDetail from './UserDetail.vue';
     import UserEdit from './UserEdit.vue';
+    //import {eventBus} from "@/main";
 
     export default {
         data: function () {
@@ -45,7 +48,12 @@
         components: {
             appUserDetail: UserDetail,
             appUserEdit: UserEdit
-        }
+        },
+        // created() {
+        //     eventBus.$on('ageWasEdited', (age) => {
+        //         this.age = age
+        //     })
+        // }
     }
 </script>
 
