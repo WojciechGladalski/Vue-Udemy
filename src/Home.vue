@@ -1,26 +1,15 @@
 <template>
     <div>
-        <p>Server statsu: {{status}}</p>
-        <hr>
-        <button @click="changeStatus">Change Status</button>
+        <app-server-status v-for="server in 5" v-bind:key="server.id"></app-server-status>
     </div>
 </template>
 
 <script>
+    import ServerStatus from "@/ServerStatus";
     export default {
-        data: function () {
-            return {
-                status: 'Critical'
-            }
-        },
-        methods: {
-            changeStatus() {
-                this.status = 'Normal'
-            }
+        //lokalne komponenty
+        components: {
+            'app-server-status': ServerStatus
         }
     }
 </script>
-
-<style scoped>
-
-</style>
