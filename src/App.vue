@@ -11,6 +11,11 @@
                 <component :is="selectedComponent">
                     Default content
                 </component>
+                <keep-alive>
+                    <component :is="selectedComponent">
+                        Default content
+                    </component>
+                </keep-alive>
 <!--                <app-quote>-->
 <!--                    <h2 slot="title">{{quoteTitle}}</h2>-->
 <!--                    <p>'This is a wonderfull quote!'</p>-->
