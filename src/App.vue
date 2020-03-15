@@ -8,9 +8,6 @@
                 <hr>
                 <p>{{selectedComponent}}</p>
                 <hr>
-                <component :is="selectedComponent">
-                    Default content
-                </component>
                 <keep-alive>
                     <component :is="selectedComponent">
                         Default content
