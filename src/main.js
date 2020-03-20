@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 //Vue.component('app-servers', Home)
 //globalny komponent
 
-//customowe dyrektywy
+//customowe dyrektywy globalne
 // Vue.directive('highlight', {
 //     //są różne metody podczas ustawianie dyrektyw (mają różny moment generowania się)
 //     // eslint-disable-next-line no-unused-vars
@@ -26,6 +26,9 @@ Vue.config.productionTip = false
 //         }, delay)
 //     }
 // })
+
+//filter globalny
+Vue.filter('to-lower-case')
 
 new Vue({
   render: h => h(App),
