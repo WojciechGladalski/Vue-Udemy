@@ -5,6 +5,8 @@
                 <h1>Filters & Mixins</h1>
                 <p>{{text | toUpperCaseFilter | toLowerCaseFilter}}</p>
                 <hr>
+<!--                button dowodzi tego że dane z mixina to świeża kopia obiektu - nie dzielą tego samego obiektu-->
+                <button @click="fruits.push('Papaya')">Add New Item</button>
                 <input v-model="filterText">
                 <ul>
                     <li v-for="fruit in filteredFruits" :key="fruit.id">{{fruit}}</li>
