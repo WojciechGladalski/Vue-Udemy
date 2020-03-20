@@ -13,7 +13,11 @@ Vue.directive('highlight', {
     //są różne metody podczas ustawianie dyrektyw (mają różny moment generowania się)
     // eslint-disable-next-line no-unused-vars
     bind(el, binding, vnode) {
-        el.style.backgroundColor = binding.value
+        //el.style.backgroundColor = 'green'
+        //el.style.backgroundColor = binding.value
+        if (binding.arg == 'background') {
+            el.style.backgroundColor = binding.value
+        }
     }
 })
 
