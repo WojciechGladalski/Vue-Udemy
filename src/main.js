@@ -28,7 +28,9 @@ Vue.config.productionTip = false
 // })
 
 //filter globalny
-Vue.filter('to-lower-case')
+Vue.filter('toLowerCaseFilter', function(value) {
+  return value.toLowerCase()
+})
 
 new Vue({
   render: h => h(App),
