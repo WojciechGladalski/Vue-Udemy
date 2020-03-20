@@ -32,6 +32,13 @@ Vue.filter('toLowerCaseFilter', function(value) {
   return value.toLowerCase()
 })
 
+//globalny mixin(mixin fragment powtarzalnego kodu np. w pliku zewnetrznym javascriptowym)
+Vue.mixin({
+    created() {
+        console.log('Global Mixin - Created Hook')
+    }
+})
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
