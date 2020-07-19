@@ -1,15 +1,16 @@
 <template>
     <div>
-        <h1>CSS layout tests</h1>
+        <Css/>
     </div>
 </template>
 
 <script>
+    import Css from "@/components/Css";
     export default {
-
+        components: {
+            Css
+        }
     }
 </script>
 
-<style>
-
-</style>
+<style></style>
