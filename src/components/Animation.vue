@@ -47,6 +47,8 @@
                 >
                     <div style="width: 100px; height: 100px; background-color: lightgreen;" v-if="load"></div>
                 </transition>
+                <div class="clean-css-transition" v-if="load"></div>
+                <div class="clean-css-animation" style="width: 100px; height: 100px; background-color: red;" v-if="load"></div>
             </div>
         </div>
     </div>
@@ -149,4 +151,32 @@
             transform: translateY(20px);
         }
     }
+
+    .clean-css-animation {
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+
+    .clean-css-transition {
+        width: 100px;
+        height: 100px;
+        background: greenyellow;
+        /*transition: width 2s;*/
+        /*transition: all 5s ease-in-out;*/
+        transition: all 3s linear;
+    }
+    .clean-css-transition:hover {
+        width: 300px;
+        transform: rotate(20deg);
+    }
+
 </style>
