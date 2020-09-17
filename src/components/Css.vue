@@ -5,6 +5,11 @@
             inline-block container
             <div>div inside example</div>
         </div>
+        <div class="loader-wrapper">
+            <svg height="59" width="63" class="star" data-rating="1">
+                <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
+            </svg>
+        </div>
         <div class="color-container-2">
             <div>div inside example 2</div>
         </div>
@@ -135,9 +140,7 @@
         grid-template-rows: 1fr 1fr;
         /*to będą dwa wiersze, ich wysokość będzie do siebie w stosunku 1:1*/
 
-        grid-template-areas:
-                "yellow green blue"
-                "yellow red blue";
+        grid-template-areas: "yellow green blue" "yellow red blue";
 
         /*nie ma wysokosci i szerokowsci a jest block wiec sie rozciaga jak moze w poziomie i jak elementy chcą w pionie*/
     }
@@ -202,5 +205,64 @@
         background-color: antiquewhite;
     }
 
+    .loader-wrapper {
+        position: absolute;
+        top: 240px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+    }
+
+    .star {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 76px;
+        width: 64px;
+        /*-webkit-animation: star-animation 3s ease infinite;*/
+        animation: star-animation 4s linear infinite;
+        animation-delay: 3s;
+        opacity: 0;
+    }
+
+    @keyframes star-animation {
+        /*0% {*/
+        /*    !*-webkit-transform: scale(0) rotate(0deg);*!*/
+        /*    transform: scale(0) rotate(0deg);*/
+        /*}*/
+        /*100% {*/
+        /*    !*-webkit-transform: scale(1) rotate(360deg);*!*/
+        /*    transform: scale(1) rotate(360deg);*/
+        /*}*/
+
+        /*bardzo ważna jest kolejność*/
+        0% {
+            transform: rotate(0deg) translateY(65px) scale(0) rotate(0deg);
+            opacity: 1;
+        }
+        25% {
+            transform: rotate(90deg) translateY(65px) scale(0.8) rotate(180deg);
+            opacity: 1;
+        }
+        50% {
+            transform: rotate(180deg) translateY(65px) scale(1) rotate(360deg);
+            opacity: 1;
+        }
+        75% {
+            transform: rotate(270deg) translateY(65px) scale(0.8) rotate(520deg);
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(360deg) translateY(65px) scale(0) rotate(720deg);
+            opacity: 1;
+        }
+    }
 
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div>
-<!--        <Css/>-->
+        <Css/>
 <!--        <AriaTabs/>-->
-        <Animation/>
+<!--        <Animation/>-->
     </div>
 </template>
 
@@ -14,8 +14,8 @@
         components: {
             // eslint-disable-next-line vue/no-unused-components
             AriaTabs,
-            // eslint-disable-next-line vue/no-unused-components
             Css,
+            // eslint-disable-next-line vue/no-unused-components
             Animation
         }
     }
