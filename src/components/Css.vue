@@ -6,7 +6,19 @@
             <div>div inside example</div>
         </div>
         <div class="loader-wrapper">
-            <svg height="59" width="63" class="star" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-1" data-rating="1">
+                <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
+            </svg>
+            <svg height="59" width="63" class="star-animation star-2" data-rating="1">
+                <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
+            </svg>
+            <svg height="59" width="63" class="star-animation star-3" data-rating="1">
+                <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
+            </svg>
+            <svg height="59" width="63" class="star-animation star-4" data-rating="1">
+                <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
+            </svg>
+            <svg height="59" width="63" class="star-animation star-5" data-rating="1">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
         </div>
@@ -214,10 +226,9 @@
         margin-right: auto;
         width: 200px;
         height: 200px;
-        background-color: black;
     }
 
-    .star {
+    .star-animation {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -226,41 +237,52 @@
         margin: auto;
         height: 76px;
         width: 64px;
-        /*-webkit-animation: star-animation 3s ease infinite;*/
-        animation: star-animation 4s linear infinite;
-        animation-delay: 3s;
+        -webkit-animation: star-animation 2.5s linear infinite;
+        animation: star-animation 2.5s linear infinite;
         opacity: 0;
     }
 
-    @keyframes star-animation {
-        /*0% {*/
-        /*    !*-webkit-transform: scale(0) rotate(0deg);*!*/
-        /*    transform: scale(0) rotate(0deg);*/
-        /*}*/
-        /*100% {*/
-        /*    !*-webkit-transform: scale(1) rotate(360deg);*!*/
-        /*    transform: scale(1) rotate(360deg);*/
-        /*}*/
+    .star-2 {
+        animation-delay: 0.3s;
+    }
 
+    .star-3 {
+        animation-delay: 0.6s;
+    }
+
+    .star-4 {
+        animation-delay: 0.9s;
+    }
+
+    .star-5 {
+        animation-delay: 1.2s;
+    }
+
+    @keyframes star-animation {
         /*bardzo ważna jest kolejność*/
         0% {
+            -webkit-transform: rotate(0deg) translateY(65px) scale(0) rotate(0deg);
             transform: rotate(0deg) translateY(65px) scale(0) rotate(0deg);
             opacity: 1;
         }
         25% {
-            transform: rotate(90deg) translateY(65px) scale(0.8) rotate(180deg);
+            -webkit-transform: rotate(90deg) translateY(65px) scale(0.8) rotate(90deg);
+            transform: rotate(90deg) translateY(65px) scale(0.8) rotate(90deg);
             opacity: 1;
         }
         50% {
-            transform: rotate(180deg) translateY(65px) scale(1) rotate(360deg);
+            -webkit-transform: rotate(180deg) translateY(65px) scale(1) rotate(180deg);
+            transform: rotate(180deg) translateY(65px) scale(1) rotate(180deg);
             opacity: 1;
         }
         75% {
-            transform: rotate(270deg) translateY(65px) scale(0.8) rotate(520deg);
+            -webkit-transform: rotate(270deg) translateY(65px) scale(0.8) rotate(270deg);
+            transform: rotate(270deg) translateY(65px) scale(0.8) rotate(270deg);
             opacity: 1;
         }
         100% {
-            transform: rotate(360deg) translateY(65px) scale(0) rotate(720deg);
+            -webkit-transform: rotate(360deg) translateY(65px) scale(0) rotate(360deg);
+            transform: rotate(360deg) translateY(65px) scale(0) rotate(360deg);
             opacity: 1;
         }
     }
