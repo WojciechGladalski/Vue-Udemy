@@ -6,19 +6,19 @@
             <div>div inside example</div>
         </div>
         <div class="loader-wrapper">
-            <svg height="59" width="63" class="star-animation star-1" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-1">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
-            <svg height="59" width="63" class="star-animation star-2" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-2">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
-            <svg height="59" width="63" class="star-animation star-3" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-3">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
-            <svg height="59" width="63" class="star-animation star-4" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-4">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
-            <svg height="59" width="63" class="star-animation star-5" data-rating="1">
+            <svg height="59" width="63" class="star-animation star-5">
                 <polygon points="31, 6, 12, 64, 62, 28, 0, 28, 50, 64" fill="#F9D71C"/>
             </svg>
         </div>
