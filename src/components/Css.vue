@@ -244,18 +244,22 @@
 
     .star-2 {
         animation-delay: 0.3s;
+        -webkit-animation-delay: 0.3s;
     }
 
     .star-3 {
         animation-delay: 0.6s;
+        -webkit-animation-delay: 0.6s;
     }
 
     .star-4 {
         animation-delay: 0.9s;
+        -webkit-animation-delay: 0.9s;
     }
 
     .star-5 {
         animation-delay: 1.2s;
+        -webkit-animation-delay: 1.2s;
     }
 
     @keyframes star-animation {
